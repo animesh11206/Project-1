@@ -7,20 +7,29 @@
 
 bool check_valid_flags(int argc, char* argv[], const std::string valid_flags[], const int num_flags) {  
 
-    int count = 0;
     for (int i = 1; i < argc; ++i) {
         std::string arg = argv[i];       
         bool valid = false;
 
-        if (is_valid_file(argc,argv, arg)) {
-            count++;
-            continue;
+        if (arg == "-w" || arg == "--wordlist" || arg == "-o" || arg == "--output") {
+
+            if (i + 1 >= argc) {
+                std::cerr << "Error: Missing argument for " << arg << '\n';
+                return false;
+            }
+
+        if (!is_valid_file(argc, argv, argv[i + 1], arg)) {
+            return false;
         }
+
+        ++i; // Skip the file path; it isn't a flag.
+        continue;
+    }
+
 
         for (int j = 0; j < num_flags; ++j) {
             
             if (arg == valid_flags[j]) {
-                count++;
                 valid = true;
                 break;
             }
@@ -32,13 +41,7 @@ bool check_valid_flags(int argc, char* argv[], const std::string valid_flags[], 
             }
     }
 
-    
-    if (count == argc - 1) {
-        return true;
-    } 
-    else {
-        return false;
-    }
+    return true;
 }
 
 

@@ -9,7 +9,11 @@ const std::string AUTHOR = "Your Name";
 
 const std::string PATH;
 const std::string FLAGS[];
+const std::string OPERATIONS_FLAGS[];
 const int NUM_FLAGS = 0;
+const int NUM_OPERATIONS_FLAGS = 0;
+
+bool OUTPUT_FILE_VALID = false;
 
 int main(int argc, char* argv[]) {
 

@@ -3,6 +3,9 @@
 
 #include <string>
 #include <fstream>
-bool is_valid_file(int argc, char* argv[], const std::string& file_path);
+
+extern bool OUTPUT_FILE_VALID;
+
+bool is_valid_file(int argc, char* argv[], const std::string& file_path, const std::string& flag);
 
 #endif
