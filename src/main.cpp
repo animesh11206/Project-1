@@ -3,6 +3,7 @@
 #include <fstream>
 #include "file_validation.h"
 #include "flag_validation.h"
+#include "operation_validation.h"
 
 const std::string VERSION = "1.0.0";
 const std::string AUTHOR = "Your Name";
@@ -14,12 +15,19 @@ const int NUM_FLAGS = 0;
 const int NUM_OPERATIONS_FLAGS = 0;
 
 bool OUTPUT_FILE_VALID = false;
+std::string OPERATIONS_FLAGS_USED[3];
+std::string input_file;
+std::string output_file;
 
 int main(int argc, char* argv[]) {
 
     if (!check_valid_flags(argc, argv, FLAGS, NUM_FLAGS)) {
-            return 1;
+        return 1;
         }
+
+    if (!num_operations(argc, argv, OPERATIONS_FLAGS, NUM_OPERATIONS_FLAGS)) {
+        return 1;
+    }
 
     
 }

@@ -45,6 +45,7 @@ bool is_valid_file(int argc, char* argv[], const std::string& file_path, const s
                         if (!is_valid_input_file(next_arg)) {
                             return false;
                         }
+                        input_file = next_arg;
                         return true; // Valid input file
                     }
 
@@ -56,6 +57,7 @@ bool is_valid_file(int argc, char* argv[], const std::string& file_path, const s
                             
                         } 
                         OUTPUT_FILE_VALID = true;
+                        output_file = next_arg;
                         return true; // Valid output file                   
                     }
                 }
