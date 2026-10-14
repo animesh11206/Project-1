@@ -8,8 +8,7 @@
 const std::string VERSION = "1.0.0";
 const std::string AUTHOR = "Your Name";
 
-const std::string PATH;
-const std::string FLAGS[];
+const std::string FLAGS[] = {"-h", "--help", "-w", "--wordlist", "-o", "--output"};
 const std::string OPERATIONS_FLAGS[];
 const int NUM_FLAGS = 0;
 const int NUM_OPERATIONS_FLAGS = 0;
