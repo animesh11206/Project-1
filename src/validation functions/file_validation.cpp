@@ -52,11 +52,11 @@ bool is_valid_file(int argc, char* argv[], const std::string& file_path, const s
                     if (arg == "-o" || arg == "--output"){
                         
                         if (!is_valid_output_file(next_arg)) {
-                            OUTPUT_FILE_VALID = false;
+                            output_file_valid = false;
                             return false;
                             
                         } 
-                        OUTPUT_FILE_VALID = true;
+                        output_file_valid = true;
                         output_file = next_arg;
                         return true; // Valid output file                   
                     }

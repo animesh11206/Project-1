@@ -41,7 +41,7 @@ bool num_operations(int argc, char* argv[], const std::string valid_operations[]
             if (arg == valid_operations[j]) {
                 count++;
                 valid = true;
-                OPERATIONS_FLAGS_USED[count-1] = arg;
+                operation_flags_used[count-1] = arg;
                 break;
             }
         }
@@ -50,6 +50,6 @@ bool num_operations(int argc, char* argv[], const std::string valid_operations[]
             continue; // Skip invalid operations, but continue checking the rest of the arguments
         }
     }
-
+    num_operation_flags_used = count;
     return true;
 }

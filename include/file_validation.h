@@ -4,7 +4,7 @@
 #include <string>
 #include <fstream>
 
-extern bool OUTPUT_FILE_VALID;
+extern bool output_file_valid;
 extern std::string input_file;
 extern std::string output_file;
 
