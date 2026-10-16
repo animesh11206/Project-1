@@ -9,17 +9,18 @@
 const std::string VERSION = "1.0.0";
 const std::string AUTHOR = "Your Name";
 
-const std::string FLAGS[6] = {"-h", "--help", "-w", "--wordlist", "-o", "--output"};
-const std::string OPERATIONS_FLAGS[];
-const int NUM_FLAGS = 0;
-const int NUM_OPERATIONS_FLAGS = 0;
+const std::string FLAGS[14] = {"-h", "--help", "--version", "-w", "--wordlist", "-o", "--output",
+                               "-ascii", "-base64", "-hex", "-url", "-utf8", "-utf16", "-utf32" };
+
+const std::string OPERATIONS_FLAGS[7] = {"-ascii", "-base64", "-hex", "-url", "-utf8", "-utf16", "-utf32"};
+
+const int NUM_FLAGS = 14;
+const int NUM_OPERATIONS_FLAGS = 7;
 
 bool output_file_valid = false;
 std::string operation_flags_used[3];
 std::string input_file;
-std::string input_path;
 std::string output_file;
-std::string output_path;
 int num_operation_flags_used;
 
 int main(int argc, char* argv[]) {
