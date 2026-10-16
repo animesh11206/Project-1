@@ -7,6 +7,8 @@
 extern bool output_file_valid;
 extern std::string input_file;
 extern std::string output_file;
+extern std::string input_path;
+extern std::string output_path;
 
 bool is_valid_file(int argc, char* argv[], const std::string& file_path, const std::string& flag);
 

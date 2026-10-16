@@ -45,7 +45,7 @@ bool is_valid_file(int argc, char* argv[], const std::string& file_path, const s
                         if (!is_valid_input_file(next_arg)) {
                             return false;
                         }
-                        input_file = next_arg;
+                        input_file = std::filesystem::absolute(next_arg).string();
                         return true; // Valid input file
                     }
 
@@ -57,7 +57,7 @@ bool is_valid_file(int argc, char* argv[], const std::string& file_path, const s
                             
                         } 
                         output_file_valid = true;
-                        output_file = next_arg;
+                        output_file = std::filesystem::absolute(next_arg).string();
                         return true; // Valid output file                   
                     }
                 }

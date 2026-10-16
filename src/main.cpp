@@ -17,7 +17,9 @@ const int NUM_OPERATIONS_FLAGS = 0;
 bool output_file_valid = false;
 std::string operation_flags_used[3];
 std::string input_file;
+std::string input_path;
 std::string output_file;
+std::string output_path;
 int num_operation_flags_used;
 
 int main(int argc, char* argv[]) {
@@ -30,7 +32,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    if (output_file_valid = false) {
+    if (!output_file_valid) {
         if (!create_output_file(operation_flags_used, input_file)) {
             return 1;
         }
