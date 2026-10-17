@@ -17,6 +17,37 @@ Wordcoder supports 11 encoding options and lets you chain up to three transforma
 
 Encoding changes how data is represented. It does not encrypt data or provide confidentiality.
 
+## Download
+
+Download the compiled binaries from the [GitHub Releases page](https://github.com/animesh11206/Project-1/releases). No compiler is needed to run the packaged tool.
+
+| Platform | Release asset |
+| --- | --- |
+| Windows x86_64 | `wordcoder-v1.0.0-windows-x86_64.zip` |
+| Linux x86_64 | `wordcoder-v1.0.0-linux-x86_64.tar.gz` |
+
+### Windows
+
+Extract the ZIP, keep the bundled DLLs alongside `wordcoder.exe`, and open PowerShell in the extracted folder:
+
+```powershell
+.\wordcoder.exe --help
+.\wordcoder.exe -w words.txt -base64
+```
+
+### Linux
+
+Extract the archive and run the tool from a terminal:
+
+```bash
+tar -xzf wordcoder-v1.0.0-linux-x86_64.tar.gz
+cd wordcoder-v1.0.0-linux-x86_64
+./wordcoder --help
+./wordcoder -w words.txt -base64
+```
+
+For the encoding examples, place your own nonempty `words.txt` in the extracted folder. Linux requires compatible system libraries; use the source build instructions below if the binary is incompatible with your distribution.
+
 ## Build from source
 
 You need a C++17 compiler and standard library with `std::filesystem` support. The project uses the C++ standard library and has no third-party library dependencies.
