@@ -162,15 +162,6 @@ Unicode operations interpret input as UTF-8. UTF-16 and UTF-32 options produce s
 - If a generated output path already exists, a numeric suffix such as `(0)` is added.
 - Exit code `0` indicates success. Handled validation and processing errors return `1`.
 
-## Known limitations
-
-- **Temporary file collision:** staging uses `<output-path>.tmp`. An existing file at that path can be overwritten and deleted. Use a destination with no existing matching `.tmp` file, and avoid concurrent runs targeting the same output. Unique temporary-file creation is still needed.
-- **Final output replacement is not atomic:** results are copied from the temporary file. An interrupted or failed copy can leave incomplete output.
-- Failed encoding runs can leave an empty automatically created output file. Temporary-file cleanup is attempted, but cleanup failures are not reported separately.
-- A nonexistent or non-regular explicit output path can be rejected without an explanatory message.
-- Repeated wordlist or output options are accepted; the last validated value is used. Supply each option once.
-- The repository does not yet include an automated test suite or CI configuration.
-
 ## Project structure
 
 ```text
