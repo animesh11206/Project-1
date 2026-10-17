@@ -7,15 +7,17 @@
 #include "create_output_file.h"
 
 const std::string VERSION = "1.0.0";
-const std::string AUTHOR = "Your Name";
+const std::string AUTHOR = "Animesh Bhatia";
 
-const std::string FLAGS[14] = {"-h", "--help", "--version", "-w", "--wordlist", "-o", "--output",
-                               "-ascii", "-base64", "-hex", "-url", "-utf8", "-utf16", "-utf32" };
+const std::string FLAGS[18] = {"-h", "--help", "--version", "-w", "--wordlist", "-o", "--output",
+                               "-ascii", "-base32", "-base64", "-base64url", "-hex", "-url", "-utf8",
+                               "-utf16be", "-utf16le", "-utf32be", "-utf32le" };
 
-const std::string OPERATIONS_FLAGS[7] = {"-ascii", "-base64", "-hex", "-url", "-utf8", "-utf16", "-utf32"};
+const std::string OPERATIONS_FLAGS[11] = {"-ascii", "-base32", "-base64", "-base64url", "-hex", "-url", "-utf8",
+                                          "-utf16be", "-utf16le", "-utf32be", "-utf32le"};
 
-const int NUM_FLAGS = 14;
-const int NUM_OPERATIONS_FLAGS = 7;
+const int NUM_FLAGS = 18;
+const int NUM_OPERATIONS_FLAGS = 11;
 
 bool output_file_valid = false;
 std::string operation_flags_used[3];
